@@ -1,0 +1,25 @@
+You can only attempt to flip cards when its your turn. You're allowed to pick only 2 cards. After that,
+you switch turns with the other player even if you matched a pair.
+You can quit the game when it's your turn by first pressing the QUIT button, and then closing the window.
+The game is over when one of the player quits or when all cards have been matched.
+If all cards have been matched, the player who has more matched pairs wins. If both players scored the same,
+the player who connected last wins. There are no draws.
+
+The usage of command line arguments:
+
+If no command line arguments are provided, the client by default uses images as the values of cards
+from images directory. It connects to localhost as the server of the program by default.
+It supports following options:
+
+-help
+	Displays the correct usage of the program.
+
+-server hostAddr
+	Sets the address of the server
+
+-img NONE |  dirPath
+	If set to NONE, numbers are used instead of images. Otherwise, creates a directory path
+	with the images to be used as faces of cards. Filenames of images must be numbers between 0 and 10.
+	It adds ".jpg" to the filenames by default, so only .jpg images can be used. The trailing '/' is added
+	to the directory path automatically, so it does not need to be provided through the command line.
+	The name of the image which is used as a back of the card must be "PlayerBackOfCard".
